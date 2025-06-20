@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vital Signs Reference</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light {
+      background-color: #f8fbff;
+      color: #222;
+    }
+
+    body.dark {
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 42px;
+      height: 42px;
+      background-color: #007bff;
+      color: white;
+      font-size: 22px;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1000;
+      transition: background-color 0.3s;
+    }
+
+    .theme-toggle:hover {
+      background-color: #0056b3;
+    }
+
+    h1 {
+      text-align: center;
+      color: inherit;
+    }
+
+    .vital-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+
+    .vital-table th, .vital-table td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #444;
+    }
+
+    .dark .vital-table th {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .dark .vital-table tr:nth-child(even) {
+      background-color: #2a2a2a;
+    }
+
+    .light .vital-table th {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .light .vital-table tr:nth-child(even) {
+      background-color: #e9f2ff;
+    }
+  </style>
+</head>
+<body class="dark">
+  <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌗</button>
+  <h1>📋 Normal Vital Signs by Age</h1>
+  <table class="dataframe vital-table">
+    <thead>
+      <tr>
+        <th>Age Group</th>
+        <th>Heart Rate (bpm)</th>
+        <th>Respiratory Rate (breaths/min)</th>
+        <th>Systolic BP (mmHg)</th>
+        <th>Diastolic BP (mmHg)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Newborn (0–28 days)</td><td>100–160</td><td>30–60</td><td>60–90</td><td>30–60</td></tr>
+      <tr><td>Infant (1–12 months)</td><td>100–160</td><td>30–53</td><td>72–104</td><td>37–56</td></tr>
+      <tr><td>Toddler (1–3 years)</td><td>90–150</td><td>22–37</td><td>86–106</td><td>42–63</td></tr>
+      <tr><td>Preschool (3–5 years)</td><td>80–140</td><td>20–28</td><td>89–112</td><td>46–72</td></tr>
+      <tr><td>School Age (6–12 years)</td><td>70–120</td><td>18–25</td><td>97–115</td><td>57–76</td></tr>
+      <tr><td>Adolescent (13+ years)</td><td>60–100</td><td>12–20</td><td>110–131</td><td>64–83</td></tr>
+    </tbody>
+  </table>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const btn = document.getElementById("themeBtn");
+      body.classList.toggle('light');
+      body.classList.toggle('dark');
+      btn.textContent = body.classList.contains('light') ? '☀️' : '🌙';
+    }
+
+    // Set initial icon on load
+    window.onload = function() {
+      const btn = document.getElementById("themeBtn");
+      const body = document.body;
+      btn.textContent = body.classList.contains('light') ? '☀️' : '🌙';
+    };
+  </script>
+</body>
+</html>
