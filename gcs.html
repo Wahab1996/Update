@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مقياس غلاسكو للغيبوبة - GCS</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #000;
+      padding: 20px;
+      border-bottom: 1px solid #444;
+    }
+    header h1 {
+      color: #d4af37;
+      margin: 0;
+    }
+    main {
+      padding: 20px;
+    }
+    table {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid #555;
+      padding: 10px;
+    }
+    th {
+      background-color: #222;
+      color: #d4af37;
+    }
+    h2 {
+      color: #d4af37;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body style="font-family: 'Segoe UI', sans-serif; background-color: #f8fbff; color: #222;">
+<style>
+.card {
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid #0077b6;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+header {
+    background-color: #0077b6;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.4em;
+}
+</style>
+
+  <header>
+    <h1>🧠 مقياس غلاسكو للغيبوبة (GCS)</h1>
+  </header>
+  <main>
+    <h2>GCS Scoring Table</h2>
+    <table>
+      <thead>
+        <tr><th>Category</th><th>Response</th><th>Score</th></tr>
+      </thead>
+      <tbody>
+        <tr><td rowspan="4">فتح العين (Eye)</td><td>تلقائي</td><td>4</td></tr>
+        <tr><td>عند النداء</td><td>3</td></tr>
+        <tr><td> عند الألم</td><td>2</td></tr>
+        <tr><td>لا يوجد استجابة </td><td>1</td></tr>
+        <tr><td rowspan="5">الاستجابة اللفظية (Verbal)</td><td>طبيعي</td><td>5</td></tr>
+        <tr><td>مشوش</td><td>4</td></tr>
+        <tr><td>كلمات غير مفهومة</td><td>3</td></tr>
+        <tr><td>أصوات فقط</td><td>2</td></tr>
+        <tr><td>لا يوجد</td><td>1</td></tr>
+        <tr><td rowspan="6">الاستجابة الحركية (Motor)</td><td>ينفذ الأوامر</td><td>6</td></tr>
+        <tr><td>يحدد مكان الألم</td><td>5</td></tr>
+        <tr><td>ينسحب من الألم</td><td>4</td></tr>
+        <tr><td>ثني غير طبيعي (Decorticate)</td><td>3</td></tr>
+        <tr><td>تمدد غير طبيعي (Decerebrate)</td><td>2</td></tr>
+        <tr><td>لا حركة</td><td>1</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Clinical Evaluation</h2>
+    <table>
+      <thead>
+        <tr><th>Total</th><th>Assessment</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>13–15</td><td>Mild</td></tr>
+        <tr><td>9–12</td><td>Moderate</td></tr>
+        <tr><td>3–8</td><td>Severe</td></tr>
+      </tbody>
+    </table>
+  </main>
+
+
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 9999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .dark-mode {
+    background-color: #111 !important;
+    color: #f1f1f1 !important;
+  }
+
+  .dark-mode .card {
+    background-color: #1a1a1a !important;
+    color: #f1f1f1 !important;
+    border-color: #444 !important;
+  }
+
+  .dark-mode header {
+    background-color: #000 !important;
+    color: #d4af37 !important;
+  }
+
+  .dark-mode a {
+    color: #9dd9ff !important;
+  }
+</style>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+  }
+
+  window.onload = function() {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  }
+</script>
+
+<button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+
+</body>
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 9999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .dark-mode {
+    background-color: #111 !important;
+    color: #f1f1f1 !important;
+  }
+
+  .dark-mode .card {
+    background-color: #1a1a1a !important;
+    color: #f1f1f1 !important;
+    border-color: #444 !important;
+  }
+
+  .dark-mode header {
+    background-color: #000 !important;
+    color: #d4af37 !important;
+  }
+
+  .dark-mode a {
+    color: #9dd9ff !important;
+  }
+</style>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+  }
+
+  window.onload = function() {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  }
+</script>
+
+<button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emergency Drugs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #ffcc00;
+            margin-bottom: 40px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card {
+            background-color: #222;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.03);
+        }
+        .card h2 {
+            color: #ffcc00;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .label {
+            font-weight: bold;
+            color: #ccc;
+        }
+        .card p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body style="font-family: 'Segoe UI', sans-serif; background-color: #f8fbff; color: #222;">
+<style>
+.card {
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid #0077b6;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+header {
+    background-color: #0077b6;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.4em;
+}
+</style>
+
+    <h1>💊 Emergency Drugs</h1>
+    <div class="grid-container">
+        <div class="card">
+            <h2>Adrenaline</h2>
+            <p><span class="label">Concentration:</span> 1:10,000</p>
+            <p><span class="label">Dose:</span> 0.01 mg/kg</p>
+            <p><span class="label">Route:</span> IV/IO</p>
+            <p><span class="label">Warning:</span> Max 1 mg</p>
+        </div>
+        <div class="card">
+            <h2>Atropine</h2>
+            <p><span class="label">Concentration:</span> 0.1 mg/mL</p>
+            <p><span class="label">Dose:</span> 0.02 mg/kg</p>
+            <p><span class="label">Route:</span> IV/IO</p>
+            <p><span class="label">Warning:</span> Min 0.1 mg, Max 0.5 mg</p>
+        </div>
+        <div class="card">
+            <h2>Amiodarone</h2>
+            <p><span class="label">Concentration:</span> 50 mg/mL</p>
+            <p><span class="label">Dose:</span> 5 mg/kg</p>
+            <p><span class="label">Route:</span> IV</p>
+            <p><span class="label">Warning:</span> Over 20-60 mins</p>
+        </div>
+        <div class="card">
+            <h2>Adenosine</h2>
+            <p><span class="label">Concentration:</span> 3 mg/mL</p>
+            <p><span class="label">Dose:</span> 0.1 mg/kg 1st, 0.2 mg/kg 2nd</p>
+            <p><span class="label">Route:</span> IV push</p>
+            <p><span class="label">Warning:</span> Rapid push with flush</p>
+        </div>
+        <div class="card">
+            <h2>Naloxone</h2>
+            <p><span class="label">Concentration:</span> 0.4 mg/mL</p>
+            <p><span class="label">Dose:</span> 0.1 mg/kg</p>
+            <p><span class="label">Route:</span> IV/IM</p>
+            <p><span class="label">Warning:</span> Max 2 mg</p>
+        </div>
+        <div class="card">
+            <h2>Dextrose 10%</h2>
+            <p><span class="label">Concentration:</span> 100 mg/mL</p>
+            <p><span class="label">Dose:</span> 2–5 mL/kg</p>
+            <p><span class="label">Route:</span> IV slow</p>
+            <p><span class="label">Warning:</span> Monitor glucose</p>
+        </div>
+        <div class="card">
+            <h2>Calcium Gluconate</h2>
+            <p><span class="label">Concentration:</span> 10%</p>
+            <p><span class="label">Dose:</span> 60–100 mg/kg</p>
+            <p><span class="label">Route:</span> IV slow</p>
+            <p><span class="label">Warning:</span> Cardiac monitoring</p>
+        </div>
+        <div class="card">
+            <h2>Sodium Bicarbonate</h2>
+            <p><span class="label">Concentration:</span> 8.4%</p>
+            <p><span class="label">Dose:</span> 1–2 mEq/kg</p>
+            <p><span class="label">Route:</span> IV</p>
+            <p><span class="label">Warning:</span> Flush line before/after</p>
+        </div>
+        <div class="card">
+            <h2>Magnesium Sulfate</h2>
+            <p><span class="label">Concentration:</span> 50%</p>
+            <p><span class="label">Dose:</span> 25–50 mg/kg</p>
+            <p><span class="label">Route:</span> IV over 30 mins</p>
+            <p><span class="label">Warning:</span> Max 2 g</p>
+        </div>
+    </div>
+
+
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 9999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .dark-mode {
+    background-color: #111 !important;
+    color: #f1f1f1 !important;
+  }
+
+  .dark-mode .card {
+    background-color: #1a1a1a !important;
+    color: #f1f1f1 !important;
+    border-color: #444 !important;
+  }
+
+  .dark-mode header {
+    background-color: #000 !important;
+    color: #d4af37 !important;
+  }
+
+  .dark-mode a {
+    color: #9dd9ff !important;
+  }
+</style>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+  }
+
+  window.onload = function() {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  }
+</script>
+
+<button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+
+</body>
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 9999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .dark-mode {
+    background-color: #111 !important;
+    color: #f1f1f1 !important;
+  }
+
+  .dark-mode .card {
+    background-color: #1a1a1a !important;
+    color: #f1f1f1 !important;
+    border-color: #444 !important;
+  }
+
+  .dark-mode header {
+    background-color: #000 !important;
+    color: #d4af37 !important;
+  }
+
+  .dark-mode a {
+    color: #9dd9ff !important;
+  }
+</style>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+  }
+
+  window.onload = function() {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  }
+</script>
+
+<button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+
+</body>
+
+</html>

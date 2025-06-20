@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>حول التطبيق</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #000;
+      padding: 20px;
+      border-bottom: 1px solid #444;
+    }
+    header h1 {
+      color: #d4af37;
+      margin: 0;
+    }
+    main {
+      padding: 40px 20px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+    strong {
+      color: #d4af37;
+    }
+  </style>
+</head>
+
+<body style="font-family: 'Segoe UI', sans-serif; background-color: #f8fbff; color: #222;">
+<style>
+.card {
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid #0077b6;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+header {
+    background-color: #0077b6;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.4em;
+}
+</style>
+
+  <header>
+    <h1>📘 حول التطبيق</h1>
+  </header>
+  <main>
+    <p><strong>تم بواسطة:</strong><br>د. عبدالوهاب عبد المنان الشيخ</p>
+    <p>طبيب طوارئ أطفال</p>
+    <p><strong>مطور:</strong> Paediatric Emergency Tools</p>
+    <p><strong>مراجع:</strong><br>UpToDate, BMJ, AMBOSS, SAUDI GUIDELINES</p>
+    <p><strong>الإصدار:</strong> v1.0 – يونيو 2025</p>
+    <p><strong>الترخيص:</strong><br>الاستخدام لأغراض التعليم والممارسة الطبية فقط – لا يُغني عن الاستشارة الطبية .</p>
+  </main>
+
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 9999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .dark-mode {
+    background-color: #111 !important;
+    color: #f1f1f1 !important;
+  }
+
+  .dark-mode .card {
+    background-color: #1a1a1a !important;
+    color: #f1f1f1 !important;
+    border-color: #444 !important;
+  }
+
+  .dark-mode header {
+    background-color: #000 !important;
+    color: #d4af37 !important;
+  }
+
+  .dark-mode a {
+    color: #9dd9ff !important;
+  }
+</style>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+  }
+
+  window.onload = function() {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  }
+</script>
+
+<button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+
+</body>
+</html>
