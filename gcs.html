@@ -3,46 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <title>مقياس غلاسكو للغيبوبة - GCS</title>
-  <style>
-    body {
-      background-color: #111;
-      color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      background-color: #000;
-      padding: 20px;
-      border-bottom: 1px solid #444;
-    }
-    header h1 {
-      color: #d4af37;
-      margin: 0;
-    }
-    main {
-      padding: 20px;
-    }
-    table {
-      width: 90%;
-      margin: 20px auto;
-      border-collapse: collapse;
-      font-size: 14px;
-    }
-    th, td {
-      border: 1px solid #555;
-      padding: 10px;
-    }
-    th {
-      background-color: #222;
-      color: #d4af37;
-    }
-    h2 {
-      color: #d4af37;
-      margin-top: 40px;
-    }
-  </style>
+  
+<style>
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --header-bg: #007acc;
+  --header-color: #ffffff;
+  --table-header-bg: #f2f2f2;
+  --table-border-color: #ccc;
+  --highlight-color: #f9c00c;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f8f9fa;
+  --header-bg: #121212;
+  --header-color: #FFD700;
+  --table-header-bg: #2c2c2c;
+  --table-border-color: #444;
+  --highlight-color: #FFD700;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2 {
+  text-align: center;
+  color: var(--highlight-color);
+}
+
+header {
+  background-color: var(--header-bg);
+  color: var(--header-color);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid var(--table-border-color);
+  text-align: center;
+}
+
+th {
+  background-color: var(--table-header-bg);
+}
+</style>
+
 </head>
 
 <body style="font-family: 'Segoe UI', sans-serif; background-color: #f8fbff; color: #222;">
